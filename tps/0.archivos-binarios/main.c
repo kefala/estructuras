@@ -3,11 +3,12 @@
 #include<time.h>
 #include<string.h>
 #include <stdbool.h>
-#include <termios.h>
 
 #define WINDOWS 0
 #define p printf
 #define s scanf
+
+//getch not working in linux
 
 typedef struct {
  int cod_art;
@@ -27,7 +28,6 @@ int principalMenu(void);
 int altasMenu(void);
 void clearScreen(void);
 void showAltasMenu(void);
-void waitASecond(void);
 
 void altaCliente(void);
 void altaArticulos(void);
@@ -37,7 +37,7 @@ void facturar(void);
 void listar(int);
 
 
-int main() {
+int main () {
     int op;
     srand(time(NULL));
     clearScreen();
@@ -131,16 +131,25 @@ void clearScreen(void) {
     else system("clear");*/
 }
 
-void waitASecond(void) {
-    system("stty cbreak -echo");
-    getch();
-    system("stty cooked echo");
-}
 
 // FUNCIONES DE APP
 void altaCliente(void) {
+    char nomfile[60] = "/home/kefala/Projects/UTN/estrucutras/estructuras/tps/0.archivos-binarios/clientes.dat";
     p("Pantala cliente \n\n");
-    waitASecond();
+    regcli client;
+    p("Ak llega");
+
+    FILE *file;
+
+    file = fopen(&nomfile, 'r');
+    /*
+    if (!f) {
+        p("No se puedo abrir el archivo con los clientes \n");
+        system("exit");
+    }
+    */
+    //fwrite(&client, sizeof(regcli), 1, f);
+    //fclose(f);
 }
 
 void altaArticulos(void) {
