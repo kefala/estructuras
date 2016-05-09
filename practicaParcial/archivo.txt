@@ -1,0 +1,18 @@
+Al igual que un autómata finito un autómata de pila cuenta 
+con un flujo de entrada y un flujo de control que puede encontrarse
+en uno de entre un número finito de estados
+Uno de estos estados se designa como el inicial 
+y por lo menos un estado es de aceptación
+La principal diferencia es que los autómatas de pila 
+cuentan con una pila en donde pueden almacenar
+información para recuperarla más tarde.
+
+
+asf
+asf
+asf
+af
+asf
+afaaaaa
+sdgs
+sdgs

@@ -127,29 +127,30 @@ void showAltasMenu(void) {
 }
 
 void clearScreen(void) {
-    /*if (WINDOWS) system("cls");
-    else system("clear");*/
+    if (WINDOWS) system("cls");
+    else system("clear");
 }
 
 
 // FUNCIONES DE APP
 void altaCliente(void) {
+
     char nomfile[60] = "/home/kefala/Projects/UTN/estrucutras/estructuras/tps/0.archivos-binarios/clientes.dat";
     p("Pantala cliente \n\n");
     regcli client;
-    p("Ak llega");
 
     FILE *file;
 
-    file = fopen(&nomfile, 'r');
-    /*
-    if (!f) {
+    file = fopen("/home/kefala/Projects/UTN/estrucutras/estructuras/tps/0.archivos-binarios/clientes.dat", "rb");
+
+    if (!file) {
         p("No se puedo abrir el archivo con los clientes \n");
         system("exit");
     }
-    */
-    //fwrite(&client, sizeof(regcli), 1, f);
-    //fclose(f);
+
+    fwrite(&client, sizeof(regcli), 1, file);
+    fclose(file);
+
 }
 
 void altaArticulos(void) {
