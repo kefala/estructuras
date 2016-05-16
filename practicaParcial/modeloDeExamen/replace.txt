@@ -1,0 +1,8 @@
+ATNEUC ALIP ED ATAMOTUA NU OTINIF ATAMOTUA NU EUQ LAUGI LA
+con un flujo de entrada y un flujo de control que puede encontrarse
+SODATSE ED OTINIF OREMUN NU ERTNE ED ONU NE
+Uno de estos estados se designa como el inicial
+NOICATPECA ED SE ODATSE NU SONEM OL ROP Y
+La principal diferencia es que los automatas de pila
+RANECAMLA NEDEUP EDNOD NE ALIP ANU NOC NATNEUC
+informacion para recuperarla mas tarde.
