@@ -1,0 +1,29 @@
+progName=$1
+lastM=$(stat -c %Y $progName.c)
+	clear
+
+	echo ""
+	echo ""
+	gcc $progName.c -o $progName
+	./$progName
+	echo ""
+	echo ""
+
+	while true
+	do
+
+		if  [ $lastM -ne $(stat -c %Y $progName.c) ]
+		then
+			clear
+			echo ""
+			echo ""
+			gcc $progName.c -o $progName
+			./$progName
+			echo ""
+			echo ""
+			lastM=$(stat -c %Y $progName.c)
+		fi
+			
+
+ 		sleep 0.1
+	done
